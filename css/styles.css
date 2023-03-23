@@ -783,7 +783,7 @@ focus {
   .portfolio::after {
     display: block;
     content: "";
-    width: 68px;
+    width: 66px;
     height: 4px;
     background-size: auto;
     background-color: #404BBF;
