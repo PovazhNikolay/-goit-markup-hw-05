@@ -17,6 +17,8 @@ html {
   --border-color: #8e8f99;
   --bg-link-dark: rgba(255, 255, 255, 0.1);
   --transition-direction-func: 250ms;
+  --cubic:cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 p,
@@ -68,10 +70,6 @@ body {
   text-transform: uppercase;
 }
 .menu-list {
- 
- 
- padding-top: 24px;
- padding-bottom: 24px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -102,10 +100,14 @@ body {
 
 .menu-list-effect:hover {
   color: var(--menu-focus-color);
+  transition-timing-function: var(--cubic);
+  transition-duration: var(--transition-direction-func);
 }
 
 .menu-list-effect:focus {
   color: var(--menu-focus-color);
+  transition-timing-function: var(--cubic);
+  transition-duration: var(--transition-direction-func);
 }
 .logo-black {
   display: flex;
@@ -165,9 +167,11 @@ body {
 }
 
 .section-hero-btn:hover,
-focus {
+.section-hero-btn:focus {
   background-color: var(--menu-focus-color);
   color: var(--menu-eff-color);
+  transition-timing-function: var(--cubic);
+  transition-duration: var(--transition-direction-func);
 }
 
 /* section 2 info -----------------------------*/
@@ -271,8 +275,11 @@ focus {
   fill: var(--team-color);
 }
 
-.ws-soc-link:hover {
+.ws-soc-link:hover,
+.ws-soc-link:focus {
   background-color: var(--menu-focus-color);
+  transition-timing-function: var(--cubic);
+  transition-duration: var(--transition-direction-func);
 }
 
 .sect-team {
@@ -330,12 +337,12 @@ focus {
   gap: 24px;
 }
 
-.info-link,
-.cust-bord :hover,
-.info-link,
-.cust-bord :focus {
+.info-link:hover .cust-bord,
+.info-link:focus .cust-bord {
   fill: var(--menu-focus-color);
   border-color: var(--menu-focus-color);
+  transition-timing-function: var(--cubic);
+  transition-duration: var(--transition-direction-func);
 }
 .info-link {
   display: flex;
@@ -350,9 +357,11 @@ focus {
 }
 
 .cust-bord:hover,
-.cust-bord :focus {
+.cust-bord:focus {
   border-color: var(--menu-focus-color);
   fill: var(--menu-focus-color);
+  transition-timing-function: var(--cubic);
+  transition-duration: var(--transition-direction-func);
 }
 
 /* footer -----------------------------*/
@@ -408,8 +417,10 @@ focus {
 }
 
 .foot-soc-bgcolor:hover,
-.foot-soc-bgcolor :focus {
+.foot-soc-bgcolor:focus {
   background-color: rgba(49, 208, 170, 1);
+  transition-timing-function: var(--cubic);
+  transition-duration: var(--transition-direction-func);
 }
 
 .footer-description {
@@ -480,6 +491,8 @@ focus {
   background: #404bbf;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition-timing-function: var(--cubic);
+    transition-duration: var(--transition-direction-func);
 }
 
 /* modul 3----------- block------------------ */
@@ -608,8 +621,8 @@ focus {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 72px;
-
   gap: 24px;
+ 
 }
 
 /**------------- PORTFOLIO ---section-Apply--block---------*/
@@ -626,7 +639,8 @@ focus {
   display: block;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
+    transition-timing-function: var(--cubic);
+  }
 
 .border-card {
   padding-top: 32px;
@@ -636,39 +650,6 @@ focus {
   border-bottom: 1px solid var(--fot-color);
   padding-left: 16px;
   padding-right: 16px;
-}
-
-/* contacts */
-
-.box {
-  width: 300px;
-  height: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-}
-
-/* Adds animation when hovering. */
-.box:hover {
-  animation-name: changeBgColor;
-  animation-duration: 3000ms;
-}
-
-@keyframes changeBgColor {
-  0% {
-    background-color: teal;
-  }
-
-  50% {
-    background-color: orange;
-  }
-
-  100% {
-    background-color: deepskyblue;
-  }
 }
 
 /* overley */
@@ -691,9 +672,9 @@ focus {
   overflow-y: scroll;
 
   transition-property: transform;
-  transition-duration: var(--transition-direction-func);
   transform: translate(0, 100%);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--cubic);
+  transition-duration: var(--transition-direction-func);
  
 
   font-size: 16px;
@@ -709,6 +690,8 @@ focus {
 .link-eff:hover .overley,
 .link-eff:focus .overley {
   transform: translate(0, 0%);
+  transition-timing-function: var(--cubic);
+  transition-duration: var(--transition-direction-func);
 }
 
 /* -------MODAL-WINDOW------ */
@@ -744,7 +727,6 @@ focus {
   position: absolute;
   top: 24px;
   right: 24px;
-
   padding: 0;
   width: 24px;
   height: 24px;
@@ -760,16 +742,19 @@ focus {
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   background-color: var(--menu-focus-color);
+  transition-duration: var(--transition-direction-func);
 }
 
 .modal-close-btn-icon:hover,
 .modal-close-btn-icon:focus {
   fill: var(--transition-direction-func);
+  transition-duration: var(--transition-direction-func);
 }
 
 .modal-close-btn:hover .modal-close-btn-icon,
 .modal-close-btn:focus .modal-close-btn-icon {
   fill: var(--menu-eff-color);
+  transition-duration: var(--transition-direction-func);
 }
 
 .studio::after {
