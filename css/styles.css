@@ -17,8 +17,7 @@ html {
   --border-color: #8e8f99;
   --bg-link-dark: rgba(255, 255, 255, 0.1);
   --transition-direction-func: 250ms;
-  --cubic:cubic-bezier(0.4, 0, 0.2, 1);
-
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 p,
@@ -95,7 +94,6 @@ body {
 }
 .mail-link {
   color: var(--menu-color);
-  
 }
 
 .menu-list-effect:hover {
@@ -491,8 +489,8 @@ body {
   background: #404bbf;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition-timing-function: var(--cubic);
-    transition-duration: var(--transition-direction-func);
+  transition-timing-function: var(--cubic);
+  transition-duration: var(--transition-direction-func);
 }
 
 /* modul 3----------- block------------------ */
@@ -622,7 +620,6 @@ body {
   margin-right: auto;
   margin-bottom: 72px;
   gap: 24px;
- 
 }
 
 /**------------- PORTFOLIO ---section-Apply--block---------*/
@@ -639,8 +636,8 @@ body {
   display: block;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    transition-timing-function: var(--cubic);
-  }
+  transition-timing-function: var(--cubic);
+}
 
 .border-card {
   padding-top: 32px;
@@ -675,7 +672,6 @@ body {
   transform: translate(0, 100%);
   transition-timing-function: var(--cubic);
   transition-duration: var(--transition-direction-func);
- 
 
   font-size: 16px;
   color: var(--team-color);
@@ -710,6 +706,10 @@ body {
   opacity: o;
   visibility: hidden;
   pointer-events: none;
+
+  opacity: 0.5;
+  transition-duration:var(--transition-direction-func);
+  transition-timing-function: var(--cubic);
 }
 
 .modal {
@@ -721,7 +721,15 @@ body {
   height: 576px;
   background-color: rgba(252, 252, 252, 1);
   border-radius: 4px;
+
+ 
+
+  transition-duration: 500ms;
+  transition-timing-function: var(--cubic);
 }
+
+
+
 
 .modal-close-btn {
   position: absolute;
@@ -743,18 +751,21 @@ body {
 .modal-close-btn:focus {
   background-color: var(--menu-focus-color);
   transition-duration: var(--transition-direction-func);
+  transition-timing-function: var(--cubic);
 }
 
 .modal-close-btn-icon:hover,
 .modal-close-btn-icon:focus {
   fill: var(--transition-direction-func);
   transition-duration: var(--transition-direction-func);
+  transition-timing-function: var(--cubic);
 }
 
 .modal-close-btn:hover .modal-close-btn-icon,
 .modal-close-btn:focus .modal-close-btn-icon {
   fill: var(--menu-eff-color);
   transition-duration: var(--transition-direction-func);
+  transition-timing-function: var(--cubic);
 }
 
 .studio::after {
@@ -763,19 +774,20 @@ body {
   width: 48px;
   height: 4px;
   background-size: auto;
-  background-color: #404BBF;
+  background-color: #404bbf;
   border-radius: 2px;
   margin-top: 25px;
-  position: absolute;}
+  position: absolute;
+}
 
-  .portfolio::after {
-    display: block;
-    content: "";
-    width: 66px;
-    height: 4px;
-    background-size: auto;
-    background-color: #404BBF;
-    border-radius: 2px;
-    margin-top: 25px;
-    position: absolute;
-  }
+.portfolio::after {
+  display: block;
+  content: "";
+  width: 66px;
+  height: 4px;
+  background-size: auto;
+  background-color: #404bbf;
+  border-radius: 2px;
+  margin-top: 25px;
+  position: absolute;
+}
