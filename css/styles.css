@@ -367,7 +367,7 @@ body {
 .cust-bord{
 
   transition-timing-function: var(--cubic);
-  transition-duration: 750ms;
+  transition-duration: var(--transition-direction-func);
 }
 
 
