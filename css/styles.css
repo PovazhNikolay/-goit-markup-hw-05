@@ -74,6 +74,8 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--brand-color);
+  transition-timing-function: var(--cubic);
+  transition-duration: var(--transition-direction-func);
 }
 
 .list {
@@ -91,21 +93,23 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--menu-color);
+  transition-timing-function: var(--cubic);
+  transition-duration: var(--transition-direction-func);
 }
 .mail-link {
   color: var(--menu-color);
+  transition-duration: var(--transition-direction-func);
+  transition-timing-function: var(--cubic);
 }
 
 .menu-list-effect:hover {
   color: var(--menu-focus-color);
-  transition-timing-function: var(--cubic);
-  transition-duration: var(--transition-direction-func);
+ 
 }
 
 .menu-list-effect:focus {
   color: var(--menu-focus-color);
-  transition-timing-function: var(--cubic);
-  transition-duration: var(--transition-direction-func);
+  
 }
 .logo-black {
   display: flex;
@@ -152,6 +156,8 @@ body {
   color: var(--menu-eff-color);
   background: var(--head-color);
   cursor: pointer;
+  transition-timing-function: var(--cubic);
+  transition-duration: var(--transition-direction-func);
 }
 
 .btn-style {
@@ -168,8 +174,7 @@ body {
 .section-hero-btn:focus {
   background-color: var(--menu-focus-color);
   color: var(--menu-eff-color);
-  transition-timing-function: var(--cubic);
-  transition-duration: var(--transition-direction-func);
+ 
 }
 
 /* section 2 info -----------------------------*/
@@ -271,13 +276,15 @@ body {
   align-items: center;
   justify-content: center;
   fill: var(--team-color);
+  transition-timing-function: var(--cubic);
+  transition-duration: var(--transition-direction-func);
+  
 }
 
 .ws-soc-link:hover,
 .ws-soc-link:focus {
   background-color: var(--menu-focus-color);
-  transition-timing-function: var(--cubic);
-  transition-duration: var(--transition-direction-func);
+ 
 }
 
 .sect-team {
@@ -335,13 +342,6 @@ body {
   gap: 24px;
 }
 
-.info-link:hover .cust-bord,
-.info-link:focus .cust-bord {
-  fill: var(--menu-focus-color);
-  border-color: var(--menu-focus-color);
-  transition-timing-function: var(--cubic);
-  transition-duration: var(--transition-direction-func);
-}
 .info-link {
   display: flex;
   align-items: center;
@@ -352,15 +352,24 @@ body {
   border-radius: 4px;
   fill: currentColor;
   fill: var(--border-color);
-}
-
-.cust-bord:hover,
-.cust-bord:focus {
-  border-color: var(--menu-focus-color);
-  fill: var(--menu-focus-color);
   transition-timing-function: var(--cubic);
   transition-duration: var(--transition-direction-func);
+
 }
+
+.info-link:hover,
+.info-link:focus {
+  border-color: var(--menu-focus-color);
+  fill: var(--menu-focus-color);
+ 
+}
+
+.cust-bord{
+
+  transition-timing-function: var(--cubic);
+  transition-duration: 750ms;
+}
+
 
 /* footer -----------------------------*/
 
@@ -412,13 +421,14 @@ body {
   align-items: center;
   justify-content: center;
   fill: var(--team-color);
+  transition-timing-function: var(--cubic);
+  transition-duration: var(--transition-direction-func);
 }
 
 .foot-soc-bgcolor:hover,
 .foot-soc-bgcolor:focus {
   background-color: rgba(49, 208, 170, 1);
-  transition-timing-function: var(--cubic);
-  transition-duration: var(--transition-direction-func);
+ 
 }
 
 .footer-description {
@@ -464,6 +474,8 @@ body {
   background: var(--team-color);
   color: var(--head-color);
   cursor: pointer;
+  transition-timing-function: var(--cubic);
+  transition-duration: var(--transition-direction-func);
 }
 
 .section-title {
@@ -485,13 +497,11 @@ body {
 .btn-fon:hover,
 .btn-fon:focus {
   color: var(--team-color);
-  border-radius: 4px;
   background: #404bbf;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition-timing-function: var(--cubic);
-  transition-duration: var(--transition-direction-func);
-}
+    transition-property: all;
+  }
 
 /* modul 3----------- block------------------ */
 
@@ -633,10 +643,9 @@ body {
 
 .card-eff:hover,
 .card-eff:focus {
-  display: block;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  transition-timing-function: var(--cubic);
+    transition-property: all;
 }
 
 .border-card {
@@ -653,6 +662,8 @@ body {
 
 .team-list-wrapp {
   display: block;
+  transition-timing-function: var(--cubic);
+  transition-duration: var(--transition-direction-func);
 }
 
 .image-wrap {
@@ -668,7 +679,7 @@ body {
   height: 100%;
   overflow-y: scroll;
 
-  transition-property: transform;
+  transition-property: all;
   transform: translate(0, 100%);
   transition-timing-function: var(--cubic);
   transition-duration: var(--transition-direction-func);
@@ -686,8 +697,7 @@ body {
 .link-eff:hover .overley,
 .link-eff:focus .overley {
   transform: translate(0, 0%);
-  transition-timing-function: var(--cubic);
-  transition-duration: var(--transition-direction-func);
+  
 }
 
 /* -------MODAL-WINDOW------ */
@@ -706,7 +716,6 @@ body {
   opacity: o;
   visibility: hidden;
   pointer-events: none;
-
   opacity: 0.5;
   transition-duration:var(--transition-direction-func);
   transition-timing-function: var(--cubic);
@@ -721,13 +730,33 @@ body {
   height: 576px;
   background-color: rgba(252, 252, 252, 1);
   border-radius: 4px;
-
- 
-
-  transition-duration: 500ms;
   transition-timing-function: var(--cubic);
+  transition-duration: var(--transition-direction-func);
 }
 
+
+/* ---ANIMATION--- */
+
+@keyframes changeBgColor {
+  0% {
+    background-color: teal;
+  }
+
+  50% {
+    background-color: orange;
+  }
+
+  100% {
+    background-color: deepskyblue;
+  }
+}
+
+.box {
+  animation-name: changeBgColor;
+}
+
+
+/* ---ANIMATION--- */
 
 
 
@@ -745,27 +774,28 @@ body {
   background-color: rgba(231, 233, 252, 1);
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: background-color var(--transition-direction-func);
+  transition-timing-function: var(--cubic);
+  cursor: pointer;
+
 }
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   background-color: var(--menu-focus-color);
-  transition-duration: var(--transition-direction-func);
-  transition-timing-function: var(--cubic);
+  
+  
 }
 
 .modal-close-btn-icon:hover,
 .modal-close-btn-icon:focus {
   fill: var(--transition-direction-func);
-  transition-duration: var(--transition-direction-func);
-  transition-timing-function: var(--cubic);
+ 
 }
 
 .modal-close-btn:hover .modal-close-btn-icon,
 .modal-close-btn:focus .modal-close-btn-icon {
   fill: var(--menu-eff-color);
-  transition-duration: var(--transition-direction-func);
-  transition-timing-function: var(--cubic);
+ 
 }
 
 .studio::after {
